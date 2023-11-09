@@ -1,0 +1,56 @@
+<div class="sp-flex sp-justify-center sp-mb-2 sp-gap-4 sp-inverted-dark-set">
+  <div class="sp-flex sp-gap-2 sp-justify-end">
+    <button [disabled]="true || disabled" spIconButton>
+      <sp-icon name="shuffle"></sp-icon>
+    </button>
+
+    <button [disabled]="true || disabled" spIconButton>
+      <sp-icon name="prev"></sp-icon>
+    </button>
+  </div>
+
+  <button
+    [disabled]="disabled"
+    spIconButton
+    class="sp-inverted-light-set"
+    (click)="resume()"
+  >
+    <sp-icon
+      [name]="(playerService.isPlaying$ | async) ? 'pause' : 'play'"
+    ></sp-icon>
+  </button>
+
+  <div class="sp-flex sp-gap-2">
+    <button [disabled]="true || disabled" spIconButton>
+      <sp-icon name="next"></sp-icon>
+    </button>
+
+    <button
+      [disabled]="disabled"
+      (click)="repeat()"
+      [class.sp-active-button]="playerService.isRepeating$ | async"
+      spIconButton
+    >
+      <sp-icon name="repeat"></sp-icon>
+    </button>
+  </div>
+</div>
+
+<div class="sp-flex sp-gap-2 sp-justify-center sp-items-center">
+  <div class="sp-min-w-[40px] sp-text-right sp-text-body-3">
+    {{ playerService.currentTime$ | async | time }}
+  </div>
+
+  <sp-progress-bar
+    [disabled]="disabled"
+    [min]="0"
+    [max]="playerService.playerElement.duration || 1"
+    [value]="(playerService.currentTime$ | async) || 0"
+    updateOn="blur"
+    (valueChange)="changeCurrentTime($event)"
+  ></sp-progress-bar>
+
+  <div class="sp-min-w-[40px] sp-text-left sp-text-body-3">
+    {{ playerService.playerElement.duration | time }}
+  </div>
+</div>

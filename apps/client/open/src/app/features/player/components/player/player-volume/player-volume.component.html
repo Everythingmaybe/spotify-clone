@@ -1,0 +1,10 @@
+<div class="sp-flex sp-w-[125px] sp-items-center">
+  <button spIconButton class="sp-inverted-dark-set">
+    <sp-icon name="volume"></sp-icon>
+  </button>
+
+  <sp-progress-bar
+    [value]="(playerService.state$ | async)?.volume"
+    (valueChange)="changeVolume($event)"
+  ></sp-progress-bar>
+</div>

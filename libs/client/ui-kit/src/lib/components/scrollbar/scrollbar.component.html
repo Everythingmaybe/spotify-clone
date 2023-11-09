@@ -1,0 +1,29 @@
+<div
+  #content
+  [scrollTop]="scrollbarY.scrollTop"
+  [scrollLeft]="scrollbarX.scrollLeft"
+  (scroll)="($event)"
+  class="sp-scrollbar-content-wrapper"
+>
+  <div (spResizeObserver)="($event)">
+    <ng-content></ng-content>
+  </div>
+</div>
+
+<div
+  #scrollbarY
+  [scrollTop]="content.scrollTop"
+  (scroll)="($event)"
+  class="sp-scrollbar-track sp-scrollbar-track-y"
+>
+  <div [style.height.px]="content.scrollHeight"></div>
+</div>
+
+<div
+  #scrollbarX
+  [scrollTop]="content.scrollLeft"
+  (scroll)="($event)"
+  class="sp-scrollbar-track sp-scrollbar-track-x"
+>
+  <div [style.width.px]="content.scrollWidth"></div>
+</div>

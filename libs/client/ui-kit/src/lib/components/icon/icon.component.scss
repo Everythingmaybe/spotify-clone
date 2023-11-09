@@ -1,0 +1,5 @@
+:host {
+  display: inline-block;
+  width: var(--sp-icon-width, var(--sp-icon-size, 16px));
+  height: var(--sp-icon-height, var(--sp-icon-size, 16px));
+}

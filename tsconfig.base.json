@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@spotify-clone/client-api-open": ["libs/client/api/open/src/index.ts"],
+      "@spotify-clone/tailwind-preset": ["tailwind-preset/src/index.ts"],
+      "@spotify-clone/ui-kit": ["libs/client/ui-kit/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

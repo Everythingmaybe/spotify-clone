@@ -1,0 +1,20 @@
+<div
+  #progressBar
+  class="sp-progress-bar"
+  [style.--sp-progress-bar-transform.%]="valuePercents"
+  (click)="onClick($event)"
+>
+  <label class="sp-native-range-input">
+    <input
+      type="range"
+      [ngModel]="value"
+      (ngModelChange)="value = $event; valueChange.emit(value)"
+    />
+  </label>
+  <div class="sp-progress-bar-background">
+    <div class="sp-progress-bar-indicator">
+      <div class="sp-progress-bar-indicator-current"></div>
+    </div>
+    <div class="sp-progress-bar-cursor"></div>
+  </div>
+</div>

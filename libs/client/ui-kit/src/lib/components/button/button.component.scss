@@ -1,0 +1,31 @@
+:host {
+  //todo
+  background-color: var(--sp-background-base, rgba(0, 0, 0, 0.54));
+  color: var(--sp-text-base, #ffffff);
+  display: inline-flex;
+  gap: 4px;
+  border-radius: 500px;
+  min-block-size: 32px;
+  align-items: center;
+  justify-content: center;
+  padding-block: 4px;
+  padding-inline: 16px;
+  white-space: nowrap;
+  overflow-wrap: anywhere;
+
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none !important;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.3;
+    transform: scale(1);
+    background-color: var(--background-base, #ffffff);
+    color: var(--text-base, #000000);
+  }
+}

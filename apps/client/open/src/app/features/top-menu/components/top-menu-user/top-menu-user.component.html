@@ -1,0 +1,14 @@
+<button
+  *ngIf="isLogined$ | async; else registrationLinks"
+  (click)="logout()"
+  spIconButton
+>
+  <sp-icon name="user"></sp-icon>
+</button>
+
+<ng-template #registrationLinks>
+  <div class="sp-flex sp-gap-4">
+    <a spButton routerLink="/sign-up"> Зарегистрироваться </a>
+    <a class="sp-inverted-light-set" spButton routerLink="/login"> Войти </a>
+  </div>
+</ng-template>

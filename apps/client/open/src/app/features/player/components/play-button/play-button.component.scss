@@ -1,0 +1,22 @@
+:host {
+  &.sp-play-button-small {
+    --sp-button-size: 16px;
+    --sp-icon-size: 16px;
+  }
+  &.sp-play-button-medium {
+    --sp-button-size: 48px;
+    --sp-icon-size: 24px;
+  }
+  &.sp-play-button-large {
+    --sp-button-size: 56px;
+    --sp-icon-size: 24px;
+  }
+}
+
+.sp-play-button {
+  opacity: 1;
+
+  //&:hover {
+  //  background-color: var(--background-highlight, #1fdf64);
+  //}
+}

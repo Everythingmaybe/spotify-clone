@@ -1,0 +1,15 @@
+:host {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  padding-bottom: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--sp-card-bg-color, #333);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+  &.sp-card-image-circle {
+    border-radius: 50%;
+  }
+}

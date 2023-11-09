@@ -1,0 +1,33 @@
+<div class="sp-pt-[64px] sp-relative sp-isolate">
+  <div
+    class="sp-absolute sp-top-[0] sp-w-full sp-h-[332px] sp-z-[-1] sp-transition-[background-color] sp-duration-1000"
+    [style.background-color]="topMenuBackground | async"
+    style="
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.6) 0,
+          var(--sp-background-base) 100%
+        ),
+        var(--sp-background-noise);
+    "
+  ></div>
+
+  <div
+    class="sp-absolute sp-top-[64px] sp-w-full sp-h-[100px]"
+    spTopMenuBackgroundOpacityTrigger
+  ></div>
+
+  <div class="sp-grid sp-grid-cols-4 sp-gap-6 sp-p-5 sp-pt-2">
+    <ng-container *ngIf="artists$ | async as artists; else loading">
+      <sp-artist-card
+        *ngFor="let artist of artists"
+        [artist]="artist"
+        (mouseenter)="topMenuBackground.next(artist.color)"
+        (mouseleave)="topMenuBackground.next(homeTopMenuColor)"
+      ></sp-artist-card>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #loading>
+  <sp-card-skeleton *ngFor="let card of [1, 2, 3, 4, 5]"></sp-card-skeleton>
+</ng-template>

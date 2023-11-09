@@ -1,0 +1,85 @@
+<ng-container *ngIf="artistDetails$ | async as artist">
+  <div
+    [style.background-color]="artist.color"
+    [style.background-image]="
+      artist.banner ? 'url(' + artist.banner + ')' : null
+    "
+    class="sp-h-[40vh] sp-min-h-[340px] sp-bg-no-repeat sp-bg-cover sp-bg-top sp-p-5 sp-flex sp-flex-col sp-justify-end sp-relative"
+  >
+    <div
+      class="sp-absolute sp-inset-[0]"
+      style="
+        background: linear-gradient(transparent 0, rgba(0, 0, 0, 0.5) 100%),
+          var(--sp-background-noise);
+      "
+    ></div>
+
+    <div class="sp-flex sp-gap-5 sp-items-center sp-relative">
+      <div
+        *ngIf="!artist.banner"
+        class="sp-w-[232px] sp-aspect-square sp-relative sp-flex-shrink-0 sp-rounded-full sp-shadow-md"
+      >
+        <img spImage [ngSrc]="artist.avatar" fill="true" alt="" />
+      </div>
+
+      <div class="sp-pb-6 sp-flex sp-flex-col sp-justify-end">
+        <h1
+          spTopMenuBackgroundOpacityTrigger
+          class="sp-text-h1 sp-mb-4 sp-text-[6rem] sp-text-color-base sp-drop-shadow"
+        >
+          {{ artist.name }}
+        </h1>
+
+        <span class="sp-text-color-base sp-text-body-1"
+          >356 364 слушателя за месяц</span
+        >
+      </div>
+    </div>
+
+    <div
+      (spIntersectionObserver)="hideTopMenuContent = $event.isIntersecting"
+    ></div>
+  </div>
+
+  <div class="sp-relative sp-isolate">
+    <div
+      class="sp-absolute sp-top-[0] sp-left-[0] sp-w-full sp-h-[232px] sp-z-[-1]"
+      [style.background-color]="artist.color"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6) 0,
+            var(--sp-background-base) 100%
+          ),
+          var(--sp-background-noise);
+      "
+    ></div>
+
+    <div class="sp-gap-4 sp-p-5">
+      <ng-container *ngIf="artist.tracks.length">
+        <sp-play-button
+          [id]="artist.tracks[0].id"
+          class="sp-play-button-large sp-bright-accent-set"
+        ></sp-play-button>
+
+        <div
+          *spTopMenuContent
+          [class.sp-opacity-0]="hideTopMenuContent"
+          [class.sp-invisible]="hideTopMenuContent"
+          class="sp-flex sp-items-center sp-gap-2 sp-opacity-0 sp-invisible sp-transition-all"
+        >
+          <sp-play-button
+            [id]="artist.tracks[0].id"
+            class="sp-play-button-medium sp-bright-accent-set"
+          ></sp-play-button>
+
+          <span class="sp-text-h3 sp-text-color-base">{{ artist.name }}</span>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="sp-px-5 sp-h-[1000px]">
+      <h2 class="sp-text-h3 sp-text-color-base sp-mb-4">Треки</h2>
+      <sp-track-list [tracks]="artist.tracks"></sp-track-list>
+    </div>
+  </div>
+</ng-container>

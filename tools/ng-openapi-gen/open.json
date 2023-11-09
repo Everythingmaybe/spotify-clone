@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/ng-openapi-gen/ng-openapi-gen-schema.json",
+  "input": "http://localhost:3000/api-json",
+  "output": "libs/client/api/open/src",
+  "templates": "tools/ng-openapi-gen/templates",
+  "indexFile": true,
+  "serviceSuffix": "ApiService",
+  "customizedResponseType": {
+    "/api/auth/login": {
+      "toUse": "text"
+    },
+    "/api/auth/sign-up": {
+      "toUse": "text"
+    },
+    "/api/auth/refresh": {
+      "toUse": "text"
+    }
+  }
+}

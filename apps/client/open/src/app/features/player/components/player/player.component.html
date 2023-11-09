@@ -1,0 +1,27 @@
+<div
+  *spLet="playerService.track$ | async as track"
+  class="sp-px-2 sp-h-[72px] sp-flex sp-justify-between sp-items-center"
+>
+  <div class="sp-w-[30%]">
+    <sp-player-track-info *ngIf="track" [track]="track"></sp-player-track-info>
+  </div>
+
+  <div class="sp-w-[40%] sp-max-w-[722px]">
+    <sp-player-controls [disabled]="!track"></sp-player-controls>
+  </div>
+
+  <div class="sp-w-[30%] sp-flex sp-justify-end sp-items-center">
+    <sp-player-play-now *ngIf="track"></sp-player-play-now>
+    <sp-player-devices></sp-player-devices>
+    <sp-player-volume></sp-player-volume>
+  </div>
+</div>
+
+<div
+  *ngIf="(playerService.currentDeviceIsActive$ | async) === false"
+  class="sp-h-[24px] sp-bg-base sp-py-1 sp-pr-6 sp-rounded-1 sp-flex sp-items-center sp-justify-end sp-bright-accent-set"
+>
+  <span class="sp-text-body-2 sp-text-color-base">
+    Играет тут: Web Player (Chrome)
+  </span>
+</div>

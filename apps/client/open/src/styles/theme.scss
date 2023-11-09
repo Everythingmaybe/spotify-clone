@@ -1,0 +1,349 @@
+.sp-dark-theme,.sp-dark-theme .sp-base-set {
+  --sp-background-base: #121212;
+  --sp-background-highlight: #1a1a1a;
+  --sp-background-press: #000;
+  --sp-background-elevated-base: #242424;
+  --sp-background-elevated-highlight: #2a2a2a;
+  --sp-background-elevated-press: #000;
+  --sp-background-tinted-base: hsla(0,0%,100%,.07);
+  --sp-background-tinted-highlight: hsla(0,0%,100%,.1);
+  --sp-background-tinted-press: hsla(0,0%,100%,.04);
+  --sp-background-unsafe-for-small-text-base: #121212;
+  --sp-background-unsafe-for-small-text-highlight: #121212;
+  --sp-background-unsafe-for-small-text-press: #121212;
+  --sp-text-base: #fff;
+  --sp-text-subdued: #a7a7a7;
+  --sp-text-bright-accent: #1ed760;
+  --sp-text-negative: #f15e6c;
+  --sp-text-warning: #ffa42b;
+  --sp-text-positive: #1ed760;
+  --sp-text-announcement: #3d91f4;
+  --sp-essential-base: #fff;
+  --sp-essential-subdued: #727272;
+  --sp-essential-bright-accent: #1ed760;
+  --sp-essential-negative: #e91429;
+  --sp-essential-warning: #ffa42b;
+  --sp-essential-positive: #1ed760;
+  --sp-essential-announcement: #0d72ea;
+  --sp-decorative-base: #fff;
+  --sp-decorative-subdued: #292929
+}
+
+.sp-dark-theme .sp-base-set>*,.sp-dark-theme>* {
+  --sp-parents-essential-base: #fff
+}
+
+.sp-dark-theme .sp-bright-accent-set {
+  --sp-background-base: #1ed760;
+  --sp-background-highlight: #1fdf64;
+  --sp-background-press: #169c46;
+  --sp-background-elevated-base: #1ed760;
+  --sp-background-elevated-highlight: #1ed760;
+  --sp-background-elevated-press: #1ed760;
+  --sp-background-tinted-base: #1ed760;
+  --sp-background-tinted-highlight: #1ed760;
+  --sp-background-tinted-press: #1ed760;
+  --sp-background-unsafe-for-small-text-base: #1ed760;
+  --sp-background-unsafe-for-small-text-highlight: #1ed760;
+  --sp-background-unsafe-for-small-text-press: #1ed760;
+  --sp-text-base: #000;
+  --sp-text-subdued: #000;
+  --sp-text-bright-accent: #000;
+  --sp-text-negative: #000;
+  --sp-text-warning: #000;
+  --sp-text-positive: #000;
+  --sp-text-announcement: #000;
+  --sp-essential-base: #000;
+  --sp-essential-subdued: #000;
+  --sp-essential-bright-accent: #000;
+  --sp-essential-negative: #000;
+  --sp-essential-warning: #000;
+  --sp-essential-positive: #000;
+  --sp-essential-announcement: #000;
+  --sp-decorative-base: #000;
+  --sp-decorative-subdued: #1abc54
+}
+
+.sp-dark-theme .sp-bright-accent-set>* {
+  --sp-parents-essential-base: #000
+}
+
+.sp-dark-theme .sp-negative-set {
+  --sp-background-base: #e91429;
+  --sp-background-highlight: #de1327;
+  --sp-background-press: #920d1a;
+  --sp-background-elevated-base: #e91429;
+  --sp-background-elevated-highlight: #e91429;
+  --sp-background-elevated-press: #e91429;
+  --sp-background-tinted-base: #e91429;
+  --sp-background-tinted-highlight: #e91429;
+  --sp-background-tinted-press: #e91429;
+  --sp-background-unsafe-for-small-text-base: #e91429;
+  --sp-background-unsafe-for-small-text-highlight: #e91429;
+  --sp-background-unsafe-for-small-text-press: #e91429;
+  --sp-text-base: #fff;
+  --sp-text-subdued: #fff;
+  --sp-text-bright-accent: #fff;
+  --sp-text-negative: #fff;
+  --sp-text-warning: #fff;
+  --sp-text-positive: #fff;
+  --sp-text-announcement: #fff;
+  --sp-essential-base: #fff;
+  --sp-essential-subdued: #fff;
+  --sp-essential-bright-accent: #fff;
+  --sp-essential-negative: #fff;
+  --sp-essential-warning: #fff;
+  --sp-essential-positive: #fff;
+  --sp-essential-announcement: #fff;
+  --sp-decorative-base: #fff;
+  --sp-decorative-subdued: #ee3a4c
+}
+
+.sp-dark-theme .sp-negative-set>* {
+  --sp-parents-essential-base: #fff
+}
+
+.sp-dark-theme .sp-warning-set {
+  --sp-background-base: #ffa42b;
+  --sp-background-highlight: #ffaf45;
+  --sp-background-press: #c57100;
+  --sp-background-elevated-base: #ffa42b;
+  --sp-background-elevated-highlight: #ffa42b;
+  --sp-background-elevated-press: #ffa42b;
+  --sp-background-tinted-base: #ffa42b;
+  --sp-background-tinted-highlight: #ffa42b;
+  --sp-background-tinted-press: #ffa42b;
+  --sp-background-unsafe-for-small-text-base: #ffa42b;
+  --sp-background-unsafe-for-small-text-highlight: #ffa42b;
+  --sp-background-unsafe-for-small-text-press: #ffa42b;
+  --sp-text-base: #000;
+  --sp-text-subdued: #000;
+  --sp-text-bright-accent: #000;
+  --sp-text-negative: #000;
+  --sp-text-warning: #000;
+  --sp-text-positive: #000;
+  --sp-text-announcement: #000;
+  --sp-essential-base: #000;
+  --sp-essential-subdued: #000;
+  --sp-essential-bright-accent: #000;
+  --sp-essential-negative: #000;
+  --sp-essential-warning: #000;
+  --sp-essential-positive: #000;
+  --sp-essential-announcement: #000;
+  --sp-decorative-base: #000;
+  --sp-decorative-subdued: #f18900
+}
+
+.sp-dark-theme .sp-warning-set>* {
+  --sp-parents-essential-base: #000
+}
+
+.sp-dark-theme .sp-positive-set {
+  --sp-background-base: #1ed760;
+  --sp-background-highlight: #1fdf64;
+  --sp-background-press: #169c46;
+  --sp-background-elevated-base: #1ed760;
+  --sp-background-elevated-highlight: #1ed760;
+  --sp-background-elevated-press: #1ed760;
+  --sp-background-tinted-base: #1ed760;
+  --sp-background-tinted-highlight: #1ed760;
+  --sp-background-tinted-press: #1ed760;
+  --sp-background-unsafe-for-small-text-base: #1ed760;
+  --sp-background-unsafe-for-small-text-highlight: #1ed760;
+  --sp-background-unsafe-for-small-text-press: #1ed760;
+  --sp-text-base: #000;
+  --sp-text-subdued: #000;
+  --sp-text-bright-accent: #000;
+  --sp-text-negative: #000;
+  --sp-text-warning: #000;
+  --sp-text-positive: #000;
+  --sp-text-announcement: #000;
+  --sp-essential-base: #000;
+  --sp-essential-subdued: #000;
+  --sp-essential-bright-accent: #000;
+  --sp-essential-negative: #000;
+  --sp-essential-warning: #000;
+  --sp-essential-positive: #000;
+  --sp-essential-announcement: #000;
+  --sp-decorative-base: #000;
+  --sp-decorative-subdued: #1abc54
+}
+
+.sp-dark-theme .sp-positive-set>* {
+  --sp-parents-essential-base: #000
+}
+
+.sp-dark-theme .sp-announcement-set {
+  --sp-background-base: #0d72ea;
+  --sp-background-highlight: #0c6ddf;
+  --sp-background-press: #084791;
+  --sp-background-elevated-base: #0d72ea;
+  --sp-background-elevated-highlight: #0d72ea;
+  --sp-background-elevated-press: #0d72ea;
+  --sp-background-tinted-base: #0d72ea;
+  --sp-background-tinted-highlight: #0d72ea;
+  --sp-background-tinted-press: #0d72ea;
+  --sp-background-unsafe-for-small-text-base: #0d72ea;
+  --sp-background-unsafe-for-small-text-highlight: #0d72ea;
+  --sp-background-unsafe-for-small-text-press: #0d72ea;
+  --sp-text-base: #fff;
+  --sp-text-subdued: #fff;
+  --sp-text-bright-accent: #fff;
+  --sp-text-negative: #fff;
+  --sp-text-warning: #fff;
+  --sp-text-positive: #fff;
+  --sp-text-announcement: #fff;
+  --sp-essential-base: #fff;
+  --sp-essential-subdued: #fff;
+  --sp-essential-bright-accent: #fff;
+  --sp-essential-negative: #fff;
+  --sp-essential-warning: #fff;
+  --sp-essential-positive: #fff;
+  --sp-essential-announcement: #fff;
+  --sp-decorative-base: #fff;
+  --sp-decorative-subdued: #2a86f3
+}
+
+.sp-dark-theme .sp-announcement-set>* {
+  --sp-parents-essential-base: #fff
+}
+
+.sp-dark-theme .sp-inverted-dark-set {
+  --sp-background-base: #000;
+  --sp-background-highlight: #0d0d0d;
+  --sp-background-press: #3f3f3f;
+  --sp-background-elevated-base: #000;
+  --sp-background-elevated-highlight: #000;
+  --sp-background-elevated-press: #000;
+  --sp-background-tinted-base: #000;
+  --sp-background-tinted-highlight: #000;
+  --sp-background-tinted-press: #000;
+  --sp-background-unsafe-for-small-text-base: #000;
+  --sp-background-unsafe-for-small-text-highlight: #000;
+  --sp-background-unsafe-for-small-text-press: #000;
+  --sp-text-base: #fff;
+  --sp-text-subdued: #8f8f8f;
+  --sp-text-bright-accent: #1ed760;
+  --sp-text-negative: #fff;
+  --sp-text-warning: #fff;
+  --sp-text-positive: #fff;
+  --sp-text-announcement: #fff;
+  --sp-essential-base: #fff;
+  --sp-essential-subdued: #5e5e5e;
+  --sp-essential-bright-accent: #1ed760;
+  --sp-essential-negative: #fff;
+  --sp-essential-warning: #fff;
+  --sp-essential-positive: #fff;
+  --sp-essential-announcement: #fff;
+  --sp-decorative-base: #fff;
+  --sp-decorative-subdued: #1f1f1f
+}
+
+.sp-dark-theme .sp-inverted-dark-set>* {
+  --sp-parents-essential-base: #fff
+}
+
+.sp-dark-theme .sp-inverted-light-set {
+  --sp-background-base: #fff;
+  --sp-background-highlight: #f6f6f6;
+  --sp-background-press: #b7b7b7;
+  --sp-background-elevated-base: #fff;
+  --sp-background-elevated-highlight: #fff;
+  --sp-background-elevated-press: #fff;
+  --sp-background-tinted-base: #fff;
+  --sp-background-tinted-highlight: #fff;
+  --sp-background-tinted-press: #fff;
+  --sp-background-unsafe-for-small-text-base: #fff;
+  --sp-background-unsafe-for-small-text-highlight: #fff;
+  --sp-background-unsafe-for-small-text-press: #fff;
+  --sp-text-base: #000;
+  --sp-text-subdued: #5e5e5e;
+  --sp-text-bright-accent: #12833a;
+  --sp-text-negative: #000;
+  --sp-text-warning: #000;
+  --sp-text-positive: #000;
+  --sp-text-announcement: #000;
+  --sp-essential-base: #000;
+  --sp-essential-subdued: #8f8f8f;
+  --sp-essential-bright-accent: #17a449;
+  --sp-essential-negative: #000;
+  --sp-essential-warning: #000;
+  --sp-essential-positive: #000;
+  --sp-essential-announcement: #000;
+  --sp-decorative-base: #000;
+  --sp-decorative-subdued: #dedede
+}
+
+.sp-dark-theme .sp-inverted-light-set>* {
+  --sp-parents-essential-base: #000
+}
+
+.sp-dark-theme .sp-muted-accent-set {
+  --sp-background-base: #000;
+  --sp-background-highlight: #0d0d0d;
+  --sp-background-press: #3f3f3f;
+  --sp-background-tinted-base: hsla(0,0%,100%,.1);
+  --sp-background-tinted-highlight: hsla(0,0%,100%,.13);
+  --sp-background-tinted-press: hsla(0,0%,100%,.06);
+  --sp-background-elevated-base: #000;
+  --sp-background-elevated-highlight: #000;
+  --sp-background-elevated-press: #000;
+  --sp-background-unsafe-for-small-text-base: #000;
+  --sp-background-unsafe-for-small-text-highlight: #000;
+  --sp-background-unsafe-for-small-text-press: #000;
+  --sp-text-base: #fff;
+  --sp-text-subdued: #9e9e9e;
+  --sp-text-bright-accent: #1ed760;
+  --sp-text-negative: #fff;
+  --sp-text-warning: #fff;
+  --sp-text-positive: #fff;
+  --sp-text-announcement: #fff;
+  --sp-essential-base: #fff;
+  --sp-essential-subdued: #6a6a6a;
+  --sp-essential-bright-accent: #1ed760;
+  --sp-essential-negative: #fff;
+  --sp-essential-warning: #fff;
+  --sp-essential-positive: #fff;
+  --sp-essential-announcement: #fff;
+  --sp-decorative-base: #fff;
+  --sp-decorative-subdued: #1f1f1f
+}
+
+.sp-dark-theme .sp-muted-accent-set>* {
+  --sp-parents-essential-base: #fff
+}
+
+.sp-dark-theme .sp-over-media-set {
+  --sp-background-base: rgba(0,0,0,.54);
+  --sp-background-highlight: rgba(0,0,0,.56);
+  --sp-background-press: rgba(0,0,0,.72);
+  --sp-background-unsafe-for-small-text-base: rgba(0,0,0,.42);
+  --sp-background-unsafe-for-small-text-highlight: rgba(0,0,0,.44);
+  --sp-background-unsafe-for-small-text-press: rgba(0,0,0,.61);
+  --sp-background-elevated-base: rgba(0,0,0,.54);
+  --sp-background-elevated-highlight: rgba(0,0,0,.54);
+  --sp-background-elevated-press: rgba(0,0,0,.54);
+  --sp-background-tinted-base: rgba(0,0,0,.54);
+  --sp-background-tinted-highlight: rgba(0,0,0,.54);
+  --sp-background-tinted-press: rgba(0,0,0,.54);
+  --sp-text-base: #fff;
+  --sp-text-subdued: #fff;
+  --sp-text-bright-accent: #fff;
+  --sp-text-negative: #fff;
+  --sp-text-warning: #fff;
+  --sp-text-positive: #fff;
+  --sp-text-announcement: #fff;
+  --sp-essential-base: #fff;
+  --sp-essential-subdued: #fff;
+  --sp-essential-bright-accent: #fff;
+  --sp-essential-negative: #fff;
+  --sp-essential-warning: #fff;
+  --sp-essential-positive: #fff;
+  --sp-essential-announcement: #fff;
+  --sp-decorative-base: #fff;
+  --sp-decorative-subdued: hsla(0,0%,100%,.13)
+}
+
+.sp-dark-theme .sp-over-media-set>* {
+  --sp-parents-essential-base: #fff
+}

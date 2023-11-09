@@ -1,0 +1,38 @@
+<div class="sp-relative">
+  <button (click)="show = !show" spIconButton class="sp-inverted-dark-set">
+    <sp-icon name="device"></sp-icon>
+  </button>
+
+  <div
+    *ngIf="show"
+    class="sp-absolute sp-bottom-full sp-right-[0] sp-translate-x-1/2 sp-w-[320px] sp-rounded-2 sp-py-6 sp-px-3 sp-bg-[#282828]"
+  >
+    <div class="sp-flex sp-gap-2 sp-items-center sp-mb-4 sp-px-3">
+      <sp-icon class="sp-text-color-bright-accent" name="desktop"></sp-icon>
+      <div>
+        <h3 class="sp-text-subtitle-1 sp-text-color-base">
+          Текущее устройство
+        </h3>
+      </div>
+    </div>
+
+    <div>
+      <h4 class="sp-text-subtitle-2 sp-text-color-base sp-mb-3 sp-px-3">
+        Нужно выбрать другое устройство
+      </h4>
+      <ul>
+        <li *ngFor="let device of playerService.devices$ | async">
+          <button
+            (click)="setActiveDevice(device.id)"
+            class="sp-py-4 sp-px-3 sp-h-[64px] sp-flex sp-items-center sp-gap-2 sp-text-color-base sp-rounded-1 sp-overflow-hidden sp-max-w-full sp-whitespace-nowrap hover:sp-bg-tinted-highlight"
+          >
+            <sp-icon name="desktop"></sp-icon>
+            <span class="sp-text-body-1 sp-overflow-ellipsis">{{
+              device.name
+            }}</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

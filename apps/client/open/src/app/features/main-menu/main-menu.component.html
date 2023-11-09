@@ -1,0 +1,23 @@
+<nav class="sp-flex sp-flex-col sp-gap-2 sp-h-full sp-bg-press">
+  <ul
+    class="sp-bg-base sp-py-2 sp-px-6 sp-rounded-2"
+    style="--sp-icon-size: 24px"
+  >
+    <li *ngFor="let link of links" class="sp-py-1">
+      <a
+        class="sp-h-[40px] sp-flex sp-gap-5 sp-items-center hover:sp-text-color-base hover:sp-no-underline"
+        [routerLink]="link.path"
+        routerLinkActive
+        [routerLinkActiveOptions]="{ exact: true }"
+        #rla="routerLinkActive"
+      >
+        <sp-icon
+          [name]="rla.isActive ? link.icon + '-fill' : link.icon"
+        ></sp-icon>
+        <span class="sp-text-subtitle-2">{{ link.name }}</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="sp-bg-base sp-py-2 sp-px-6 sp-rounded-2 sp-flex-1"></div>
+</nav>

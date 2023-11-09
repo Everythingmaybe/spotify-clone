@@ -1,0 +1,10 @@
+<button
+  class="sp-play-button"
+  *spLet="currentIsPlaying$ | async as currentIsPlaying"
+  spIconButton
+  (click)="
+    onClick(currentIsPlaying); $event.preventDefault(); $event.stopPropagation()
+  "
+>
+  <sp-icon [name]="currentIsPlaying ? 'pause' : 'play'"></sp-icon>
+</button>

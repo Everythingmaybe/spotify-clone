@@ -1,0 +1,8 @@
+<button
+  spIconButton
+  class="sp-inverted-dark-set"
+  [class.sp-active-button]="playNowService.show()"
+  (click)="playNowService.toggle()"
+>
+  <sp-icon name="play-now"></sp-icon>
+</button>

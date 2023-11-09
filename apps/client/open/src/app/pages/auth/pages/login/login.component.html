@@ -1,0 +1,67 @@
+<div class="sp-max-w-[734px] sp-py-[32px] sp-mx-auto">
+  <h1
+    class="sp-text-h1 sp-text-[3rem] sp-text-color-base sp-my-[40px] sp-text-center"
+  >
+    Войти в Spotify
+  </h1>
+
+  <div class="sp-mx-auto sp-max-w-[324px]">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="sp-space-y-4">
+        <div>
+          <label
+            class="sp-text-subtitle-3 sp-text-color-base sp-mb-2 sp-inline-block"
+            for="email"
+            >Электронная почта</label
+          >
+          <input
+            class="sp-block sp-w-full sp-border-0 sp-text-body-1 sp-rounded-1 sp-px-[14px] sp-py-2 sp-min-h-[48px] sp-bg-base sp-text-color-base sp-shadow-[inset_0_0_0_1px_var(--essential-subdued,#878787)]"
+            formControlName="email"
+            name="email"
+            type="email"
+            id="email"
+            placeholder="Электронная почта"
+          />
+        </div>
+
+        <div>
+          <label
+            class="sp-text-subtitle-3 sp-text-color-base sp-mb-2 sp-inline-block"
+            for="password"
+            >Пароль</label
+          >
+          <input
+            class="sp-block sp-w-full sp-border-0 sp-text-body-1 sp-rounded-1 sp-px-[14px] sp-py-2 sp-min-h-[48px] sp-bg-base sp-text-color-base sp-shadow-[inset_0_0_0_1px_var(--essential-subdued,#878787)]"
+            formControlName="password"
+            name="password"
+            type="password"
+            id="password"
+            placeholder="Пароль"
+          />
+        </div>
+      </div>
+
+      <button
+        spButton
+        class="sp-bright-accent-set sp-mt-[32px] sp-w-full sp-h-[48px]"
+        type="submit"
+      >
+        <span class="sp-text-subtitle-2">Войти</span>
+      </button>
+    </form>
+
+    <hr class="sp-my-[32px] sp-border-[var(--sp-decorative-subdued)]" />
+
+    <div class="sp-text-center">
+      <h2>
+        <span class="sp-text-body-1 sp-text-color-subdued">Нет аккаунта?</span>
+        <a
+          routerLink="/sign-up"
+          class="sp-text-body-1 sp-text-color-base hover:sp-text-color-bright-accent sp-ml-2 sp-underline"
+        >
+          Регистрация в Spotify
+        </a>
+      </h2>
+    </div>
+  </div>
+</div>

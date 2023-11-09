@@ -1,0 +1,33 @@
+<a
+  class="hover:sp-no-underline focus:sp-no-underline"
+  [routerLink]="['/artist', artist.id]"
+>
+  <sp-card>
+    <sp-card-header>
+      <sp-card-image
+        [style.--sp-card-bg-color]="artist.color"
+        class="sp-card-image-circle"
+      >
+        <img [ngSrc]="artist.avatar" fill [alt]="artist.name" />
+      </sp-card-image>
+      <sp-card-actions>
+        <sp-play-button
+          class="sp-bright-accent-set sp-play-button-medium"
+          id="65100829a4e975b496df4f56"
+        ></sp-play-button>
+      </sp-card-actions>
+    </sp-card-header>
+
+    <sp-card-content>
+      <a
+        class="sp-text-color-base sp-text-subtitle-2 sp-mb-1"
+        [routerLink]="['/artist', artist.id]"
+        >{{ artist.name }}</a
+      >
+
+      <div class="sp-text-color-subdued sp-text-body-2 sp-line-clamp-2">
+        Исполнитель
+      </div>
+    </sp-card-content>
+  </sp-card>
+</a>
