@@ -1,11 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "builds": [
-    {
-      "src": "dist/apps/server/open/main.js",
-      "use": "@vercel/node"
-    }
-  ],
+  "outputDirectory": "dist/apps/server/open",
   "routes": [
     {
       "src": "/api/(.*)",
