@@ -8,7 +8,7 @@
     "server-open:dev": "nx serve server-open",
     "ng-openapi-gen": "ng-openapi-gen",
     "generate-client-open-api": "ng-openapi-gen -c tools/ng-openapi-gen/open.json",
-    "build": "nx run-many -t build && prisma generate --schema=./apps/server/open/prisma/schema.prisma && node dist/apps/server/open/main.js",
+    "build": "nx run-many -t build && prisma generate --schema=./apps/server/open/prisma/schema.prisma",
     "client-open:build": "nx build client-open",
     "server-open:build": "nx build server-open"
   },
