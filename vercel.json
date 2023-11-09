@@ -1,14 +1,20 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "rewrites": [
+  "builds": [
     {
-      "source": "/api/(.*)",
-      "destination": "dist/apps/server/open/main.js"
+      "src": "dist/apps/server/open/main.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "dist/apps/server/open/main.js"
     },
     {
-      "source": "/(.*)",
-      "destination": "dist/apps/client/open/index.html"
+      "src": "/(.*)",
+      "dest": "dist/apps/client/open/index.html"
     }
   ]
 }
