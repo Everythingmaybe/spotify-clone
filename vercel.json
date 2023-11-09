@@ -1,14 +1,4 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/apps/client/open",
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "dist/apps/server/open/main.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "dist/apps/client/open/index.html"
-    }
-  ]
+  "outputDirectory": "dist/apps/client/open"
 }
