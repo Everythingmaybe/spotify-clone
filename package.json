@@ -3,13 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "",
     "start:dev": "nx run-many -t serve",
     "client-open:dev": "nx serve client-open",
     "server-open:dev": "nx serve server-open",
     "ng-openapi-gen": "ng-openapi-gen",
     "generate-client-open-api": "ng-openapi-gen -c tools/ng-openapi-gen/open.json",
-    "build": "nx run-many -t build",
+    "build": "nx run-many -t build && node dist/apps/server/open/main.js",
     "client-open:build": "nx build client-open",
     "server-open:build": "nx build server-open"
   },
