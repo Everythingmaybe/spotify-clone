@@ -1,6 +1,5 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/apps/server/open",
   "routes": [
     {
       "src": "/api/(.*)",
