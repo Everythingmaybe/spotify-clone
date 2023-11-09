@@ -24,7 +24,7 @@ export const appConfig: ApplicationConfig = {
     ),
     importProvidersFrom([
       HttpClientModule,
-      ApiModule.forRoot({ rootUrl: 'http://localhost:3000' }),
+      // ApiModule.forRoot({ rootUrl: '/' }),
       AuthModule,
     ]),
     {

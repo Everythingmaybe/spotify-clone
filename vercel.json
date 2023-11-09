@@ -1,0 +1,18 @@
+{
+  "builds": [
+    {
+      "src": "dist/apps/server/open/main.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/api/(.*)",
+      "destination": "dist/apps/server/open/main.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "dist/apps/client/open/index.html"
+    }
+  ]
+}
