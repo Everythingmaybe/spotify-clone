@@ -1,0 +1,91 @@
+:host {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+
+  &:hover {
+    .sp-scrollbar-track {
+      opacity: 1;
+      pointer-events: auto;
+      transition-delay: 0ms;
+    }
+  }
+}
+
+.sp-scrollbar-content-wrapper {
+  overflow: scroll;
+  height: 100%;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    width: 0;
+    height: 0;
+  }
+}
+
+.sp-scrollbar-track {
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  transition-delay: 1s;
+
+  scrollbar-width: auto;
+  scrollbar-color: hsla(0, 0%, 100%, 0.3) transparent;
+
+  &::-webkit-scrollbar {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    background-clip: content-box;
+    background-color: hsla(0, 0%, 100%, 0.3);
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: hsla(0, 0%, 100%, 0.5);
+    }
+  }
+}
+
+.sp-scrollbar-track-x {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  > div {
+    height: 16px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    min-width: 30px;
+    height: 100%;
+  }
+}
+
+.sp-scrollbar-track-y {
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  > div {
+    width: 16px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    min-height: 30px;
+    width: 100%;
+  }
+}

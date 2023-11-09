@@ -1,0 +1,31 @@
+<div class="sp-layout" [class.sp-right-sidebar-hidden]="!playNowService.show()">
+  <div class="sp-left-sidebar-area">
+    <sp-main-menu class="sp-h-full"></sp-main-menu>
+  </div>
+
+  <div
+    class="sp-main-view-area sp-bg-base sp-rounded-2 sp-overflow-hidden sp-relative"
+  >
+    <sp-top-menu></sp-top-menu>
+    <div class="sp-absolute sp-inset-[0]">
+      <sp-scrollbar>
+        <router-outlet></router-outlet>
+      </sp-scrollbar>
+    </div>
+  </div>
+
+  <footer class="sp-player-area">
+    <sp-footer></sp-footer>
+  </footer>
+
+  <div
+    *ngIf="playNowService.show()"
+    class="sp-right-sidebar-area sp-rounded-2 sp-overflow-hidden sp-w-[300px] sp-relative"
+  >
+    <div class="sp-absolute sp-inset-[0]">
+      <sp-scrollbar>
+        <sp-play-now class="sp-h-[1000px] sp-block"></sp-play-now>
+      </sp-scrollbar>
+    </div>
+  </div>
+</div>

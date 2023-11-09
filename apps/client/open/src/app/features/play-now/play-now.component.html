@@ -1,0 +1,68 @@
+<div
+  class="sp-bg-base sp-rounded-2 sp-h-full sp-p-4 sp-flex sp-flex-col sp-gap-4"
+>
+  <ng-container *ngIf="playNowService.track() as track">
+    <div class="sp-flex sp-justify-end">
+      <button spIconButton (click)="playNowService.toggle(false)">
+        <sp-icon name="close"></sp-icon>
+      </button>
+    </div>
+
+    <div class="sp-flex sp-flex-col sp-gap-4">
+      <div>
+        <img
+          class="sp-w-full sp-aspect-square sp-rounded-2"
+          [ngSrc]="track.image || ''"
+          spImage
+          width="640"
+          height="640"
+          alt=""
+        />
+      </div>
+
+      <div>
+        <div class="sp-leading-none">
+          <a
+            class="sp-text-h3 sp-text-color-base"
+            [routerLink]="['/track', track.id]"
+            >{{ track.title }}</a
+          >
+        </div>
+
+        <div class="sp-leading-normal">
+          <ng-container
+            *ngFor="let artist of track.artists; let isFirst = first"
+          >
+            <ng-container *ngIf="!isFirst">, </ng-container>
+            <a
+              class="sp-text-body-1 hover:sp-text-color-base"
+              [routerLink]="['/artist', artist.id]"
+              >{{ artist.name }}</a
+            >
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
+    <div
+      *ngIf="track.artists[0] as artist"
+      class="sp-rounded-2 sp-bg-tinted-base"
+    >
+      <div
+        class="sp-bg-center sp-bg-cover sp-pb-[60%] sp-rounded-t-2"
+        [style.background-image]="
+          'linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), url(' +
+          artist.avatar +
+          ')'
+        "
+      >
+        <div class="sp-p-4 sp-text-subtitle-2 sp-text-color-base">
+          Об исполнителе
+        </div>
+      </div>
+      <div class="sp-text-subtitle-1 sp-text-color-base sp-p-4">
+        {{ artist.name }}
+      </div>
+    </div>
+  </ng-container>
+</div>

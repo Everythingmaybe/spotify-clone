@@ -1,0 +1,21 @@
+<sp-player *ngIf="isLogined$ | async; else registrationBanner"></sp-player>
+<ng-template #registrationBanner>
+  <div
+    class="sp-px-5 sp-py-3 sp-flex sp-items-center sp-gap-6"
+    style="background-image: linear-gradient(90deg, #af2896, #509bf5)"
+  >
+    <div class="sp-grow">
+      <p class="sp-text-body-2 sp-text-color-base sp-uppercase">
+        Предварительный просмотр Spotify
+      </p>
+      <p class="sp-text-body-1 sp-text-color-base">
+        Зарегистрируйся, чтобы слушать музыку и подкасты без ограничений. Иногда
+        мы будем показывать рекламу, но ты сможешь пользоваться сервисом
+        бесплатно!
+      </p>
+    </div>
+    <a class="sp-inverted-light-set" spButton routerLink="/sign-up">
+      Зарегистрироваться
+    </a>
+  </div>
+</ng-template>

@@ -1,0 +1,74 @@
+<div class="sp-sticky sp-top-[64px] sp-mb-2">
+  <div class="sp-track-list-header-row sp-text-body-2 sp-text-color-base">
+    <div>#</div>
+    <div>Название</div>
+    <div>Альбом</div>
+    <div class="sp-justify-self-end">
+      <sp-icon name="time"></sp-icon>
+    </div>
+  </div>
+</div>
+
+<ng-container *spLet="playerService.isPlaying$ | async as isPlaying">
+  <div *spLet="playerService.trackId$ | async as playedTrackId">
+    <div
+      *ngFor="let track of tracks; let index = index"
+      [class.sp-is-playing]="playedTrackId === track.id && isPlaying"
+      [class.sp-is-active]="playedTrackId === track.id"
+      class="sp-track-list-row sp-group"
+    >
+      <div class="sp-relative sp-w-[16px] sp-h-[16px]">
+        <span
+          class="sp-track-list-row-index group-[.sp-is-active]:sp-text-color-bright-accent"
+          >{{ index + 1 }}</span
+        >
+        <div class="sp-track-list-row-play-button">
+          <sp-play-button
+            [id]="track.id"
+            #playButton
+            class="sp-play-button-small"
+          ></sp-play-button>
+        </div>
+      </div>
+
+      <div class="sp-flex sp-items-center">
+        <img
+          class="sp-mr-4"
+          [ngSrc]="track.image"
+          width="40"
+          height="40"
+          [alt]="track.title"
+        />
+
+        <div>
+          <div class="sp-text-body-1">
+            <a
+              class="sp-text-color-base group-[.sp-is-active]:sp-text-color-bright-accent"
+              [routerLink]="['/track', track!.id]"
+              >{{ track.title }}</a
+            >
+          </div>
+
+          <div
+            class="sp-text-body-2 sp-whitespace-nowrap sp-overflow-x-hidden sp-overflow-ellipsis"
+          >
+            <ng-container
+              *ngFor="let artist of track.artists; let isFirst = first"
+            >
+              <ng-container *ngIf="!isFirst">, </ng-container>
+              <a
+                class="sp-text-color-current"
+                [routerLink]="['/artist', artist.id]"
+                >{{ artist.name }}</a
+              >
+            </ng-container>
+          </div>
+        </div>
+      </div>
+
+      <div class="sp-text-body-2">191 827 654</div>
+
+      <div class="sp-text-body-2 sp-justify-self-end">5:32</div>
+    </div>
+  </div>
+</ng-container>

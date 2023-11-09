@@ -1,0 +1,35 @@
+<div class="sp-flex sp-gap-2 sp-items-center">
+  <div class="sp-mr-2">
+    <a [routerLink]="['/track', track!.id]">
+      <img
+        spImage
+        [ngSrc]="track?.image || ''"
+        width="56"
+        height="56"
+        alt=""
+        class="sp-rounded-1"
+      />
+    </a>
+  </div>
+
+  <div>
+    <div class="sp-leading-none">
+      <a
+        class="sp-text-body-2 sp-text-color-base"
+        [routerLink]="['/track', track!.id]"
+        >{{ track?.title }}</a
+      >
+    </div>
+
+    <div class="sp-leading-none">
+      <ng-container *ngFor="let artist of track!.artists; let isFirst = first">
+        <ng-container *ngIf="!isFirst">, </ng-container>
+        <a
+          class="sp-text-body-3 hover:sp-text-color-base"
+          [routerLink]="['/artist', artist.id]"
+          >{{ artist.name }}</a
+        >
+      </ng-container>
+    </div>
+  </div>
+</div>

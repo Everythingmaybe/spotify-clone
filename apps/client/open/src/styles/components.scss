@@ -1,0 +1,37 @@
+@layer components {
+  .sp-skeleton {
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      animation: shimmer 2s infinite;
+      background-image: linear-gradient(
+        90deg,
+        transparent,
+        var(--sp-background-tinted-highlight, hsla(0, 0%, 100%, 0.1)),
+        transparent
+      );
+    }
+
+    &.sp-skeleton-text {
+      background-color: var(
+        --sp-background-tinted-highlight,
+        hsla(0, 0%, 100%, 0.1)
+      );
+      border-radius: 1000px;
+      max-width: 100%;
+
+      &:before {
+        content: 'S';
+        opacity: 0;
+      }
+    }
+  }
+}

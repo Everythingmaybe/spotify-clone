@@ -1,0 +1,27 @@
+:host {
+  display: inline-flex;
+  width: var(--sp-button-size, 32px);
+  min-width: var(--sp-button-size, 32px);
+  height: var(--sp-button-size, 32px);
+  align-items: center;
+  justify-content: center;
+  color: var(--sp-text-base);
+  background-color: var(--sp-background-base);
+  border-radius: var(--sp-button-radius, 50%);
+  text-decoration: none !important;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+    scale: 1.04;
+  }
+
+  &[disabled] {
+    color: var(--text-subdued, #6a6a6a);
+    opacity: 0.3;
+  }
+
+  &.sp-active-button {
+    --sp-text-base: var(--sp-text-bright-accent, #1ed760);
+  }
+}
