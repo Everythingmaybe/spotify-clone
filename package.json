@@ -8,9 +8,9 @@
     "server-open:dev": "nx serve server-open",
     "ng-openapi-gen": "ng-openapi-gen",
     "generate-client-open-api": "ng-openapi-gen -c tools/ng-openapi-gen/open.json",
-    "build": "nx run-many -t build && prisma generate --schema=./apps/server/open/prisma/schema.prisma",
-    "client-open:build": "nx build client-open",
-    "server-open:build": "nx build server-open"
+    "build": "prisma generate --schema=./apps/server/open/prisma/schema.prisma && npm run client-open:build && npm run server-open:build",
+    "client-open:build": "nx build client-open --skip-nx-cache",
+    "server-open:build": "nx build server-open --skip-nx-cache"
   },
   "private": true,
   "dependencies": {

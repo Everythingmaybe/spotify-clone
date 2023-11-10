@@ -11,7 +11,8 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/apps/server/open",
+        "outputPath": "dist/api",
+        "outputFileName": "index.js",
         "main": "apps/server/open/src/main.ts",
         "tsConfig": "apps/server/open/tsconfig.app.json",
         "assets": ["apps/server/open/src/assets"],
