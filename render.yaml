@@ -9,8 +9,3 @@ services:
     runtime: static
     buildCommand: npm install && npm run client-open:build
     staticPublishPath: ./dist/apps/client/open
-#    routes:
-#      # rewrite /app/* requests to /app
-#      - type: rewrite
-#        source: /*
-#        destination: /
