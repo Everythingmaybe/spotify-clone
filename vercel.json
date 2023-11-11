@@ -10,5 +10,5 @@
       "use": "@now/static"
     }
   ],
-  "routes": [{ "src": "api/(.*)", "dest": "api" }, { "src": "(.*)", "dest": "/" }]
+  "routes": [{ "src": "api/(.*)", "dest": "api" }]
 }
