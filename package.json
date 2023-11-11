@@ -11,7 +11,7 @@
     "generate-client-open-api": "ng-openapi-gen -c tools/ng-openapi-gen/open.json",
     "build": "prisma generate --schema=./apps/server/open/prisma/schema.prisma && nx run-many -t build",
     "client-open:build": "nx build client-open",
-    "server-open:build": "nx build server-open"
+    "server-open:build": "prisma generate --schema=./apps/server/open/prisma/schema.prisma && nx build server-open"
   },
   "private": true,
   "dependencies": {
