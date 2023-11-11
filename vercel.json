@@ -6,9 +6,9 @@
     "use": "@vercel/node"
   },
     {
-      "src": "*",
+      "src": "**",
       "use": "@now/static"
     }
   ],
-  "routes": [{ "src": "api/(.*)", "dest": "api/" }]
+  "routes": [{ "src": "api/(.*)", "dest": "api/index.js" }]
 }
