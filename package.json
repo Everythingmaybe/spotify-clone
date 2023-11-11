@@ -3,14 +3,15 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "start": "node dist/apps/server/open/main.js",
     "start:dev": "nx run-many -t serve",
     "client-open:dev": "nx serve client-open",
     "server-open:dev": "nx serve server-open",
     "ng-openapi-gen": "ng-openapi-gen",
     "generate-client-open-api": "ng-openapi-gen -c tools/ng-openapi-gen/open.json",
-    "build": "prisma generate --schema=./apps/server/open/prisma/schema.prisma && npm run client-open:build && npm run server-open:build",
-    "client-open:build": "nx build client-open --skip-nx-cache",
-    "server-open:build": "nx build server-open --skip-nx-cache"
+    "build": "prisma generate --schema=./apps/server/open/prisma/schema.prisma && nx run-many -t build",
+    "client-open:build": "nx build client-open",
+    "server-open:build": "nx build server-open"
   },
   "private": true,
   "dependencies": {
